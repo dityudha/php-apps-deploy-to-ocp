@@ -16,7 +16,7 @@ try {
 if (isset($_POST['action'])) {
     if ($_POST['action'] === 'insert') {
         $message = $_POST['message'] ?? 'Default Message';
-        $stmt = $pdo->prepare("INSERT INTO loop_data (message) VALUES (:message)");
+        $stmt = $pdo->prepare("INSERT INTO loop_data_yudha (message) VALUES (:message)");
         $stmt->execute(['message' => $message]);
         echo "Data inserted: $message";
     }
