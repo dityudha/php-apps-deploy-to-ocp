@@ -1,9 +1,9 @@
 <?php
 // Get database connection details from environment variables
-$host = getenv('DB_HOST') ?: 'looping_app_1';
-$dbname = getenv('DB_NAME') ?: 'pocdb';
-$user = getenv('DB_USER') ?: 'adminpoc';
-$pass = getenv('DB_PASS') ?: 'adminpoc123';
+$host = getenv('MYSQL_SERVICE_HOST');
+$user = getenv('MYSQL_USER');
+$pass = getenv('MYSQL_PASSWORD');
+$dbname = getenv('MYSQL_DATABASE');
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
